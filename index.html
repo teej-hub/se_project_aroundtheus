@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="TJ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1;"/>
+    <meta
+        name="description"
+        content="aroundtheus, a website to display selected images from a user"
+        />
+    <meta
+        name="keywords" content="Triple Ten around the US"/>
+    <link rel="stylesheet" href="./pages/index.css"/>
   </head>
   <body>
     <div class="page">
-        <header class="header"></header>
-        <main class="content"></main>
+        <header class="header">
+            <img
+                src="./images/header_image.svg"
+                alt="Website title, around the US"
+                class="header__image">
+        </header>
+        <main class="content">
+            <section class="profile">
+                <img 
+                    src="./images/jacque-pfp.png"
+                    alt="Jacques Cousteau's profile picture for aroundtheus"
+                    class="profile__image"
+                    >
+                <div class="profile__content">
+                    <h2 class="profile__name">Jacques Cousteau</h2>
+                    <h3 class="profile__subtitle">Explorer</h3>
+                    <img
+                        src="./images/edit.svg"
+                        alt="Icon for the edit button"
+                        class="profile__edit-icon"
+                        >
+                    <img
+                        src="./images/add.svg"
+                        alt="Icon for the add button"
+                        class="profile__add-icon"
+                        />
+                </div>
+            </section>
+
+            <!--cards container, grid type -->
+            <section class="cards">
+                <ul class="cards__container">
+                    <li class="card"></li>
+                    <li class="card"></li>
+                    <li class="card"></li>
+                    <li class="card"></li>
+                    <li class="card"></li>
+                    <li class="card"></li>
+                </ul>
+            </section>
+
+        </main>
         <footer class="footer"></footer>
     </div>
   </body>
