@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="TJ" />
-    <meta name="viewport" content="width=device-width, initial-scale=1;"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1;"/>
     <meta
         name="description"
         content="aroundtheus, a website to display selected images from a user"
         />
-    <meta
-        name="keywords" content="Triple Ten around the US"/>
+    <meta name="keywords" content="Triple Ten around the US"/>
+    <title>Around the US</title>
     <link rel="stylesheet" href="./pages/index.css"/>
   </head>
-  <body>
-    <div class="page">
+  <body class="page">
+    <div class="page__content">
         <header class="header">
             <img
                 src="./images/header_image.svg"
@@ -23,29 +23,24 @@
         <main class="content">
             <section class="profile">
                 <img 
-                    src="./images/jacque-pfp.png"
-                    alt="Jacques Cousteau's profile picture for aroundtheus"
-                    class="profile__image"
-                    >
+                src="./images/jacques-avatar.png"
+                alt="Jacques Cousteau's profile picture for aroundtheus"
+                class="profile__image"
+                >
                 <div class="profile__content">
-                    <h2 class="profile__name">Jacques Cousteau</h2>
+                    <h2 class="profile__name">Jacques Cousteau
+                        <button class="profile__edit-button"></button>
+                    </h2>
+                    
                     <h3 class="profile__subtitle">Explorer</h3>
-                    <img
-                        src="./images/edit.svg"
-                        alt="Icon for the edit button"
-                        class="profile__edit-icon"
-                        >
-                    <img
-                        src="./images/add.svg"
-                        alt="Icon for the add button"
-                        class="profile__add-icon"
-                        />
                 </div>
+                <button class="profile__add-button"></button>
+                
             </section>
 
             <!--cards container, grid type -->
             <section class="cards">
-                <ul class="cards__container">
+                <ul class="card__list">
                     <li class="card"></li>
                     <li class="card"></li>
                     <li class="card"></li>
