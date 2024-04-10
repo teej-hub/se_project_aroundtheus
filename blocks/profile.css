@@ -20,17 +20,16 @@
     font-size: 42px;
     line-height: 48px;
     margin: 0;
-    position: relative;
-    
-    
-
+    display: flex;
+    align-items: flex-end;
 }
 
 .profile__subtitle {
     font-weight: 400;
     font-size: 18px;
     line-height: 21.78px;
-    margin: 0;
+    margin: 7px 0 0;
+
 }
 
 .profile__edit-button {
@@ -42,6 +41,7 @@
     border: solid 2px #fff;
     background-color: #000;
     margin-left: 18px;
+    margin-bottom: 9px;
 }
 
 .profile__add-button {

@@ -1,7 +1,44 @@
 .cards {
+    max-width: 880px;
+    max-height: 742px;
+    margin-top: 51px;
 
 }
 
 .card__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+    grid-template-areas: 
+        "card1 card2 card3"
+        "card4 card5 card6";
+    list-style-type: none;
+    grid-column-gap: 17px;
+    grid-row-gap: 20px;
+}
 
+.card__yosemite {
+    grid-area: card1;
+}
+
+.card__lake-louise {
+    grid-area: card2;
+}
+
+.card__bald-mountains {
+    grid-area: card3;
+}
+
+.card__latemar {
+    grid-area: card4;
+}
+
+.card__vanoise {
+    grid-area: card5;
+}
+
+.card__lago {
+    grid-area: card6;
 }
