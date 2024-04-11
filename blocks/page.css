@@ -1,7 +1,6 @@
 .page {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     background-color: #000;
-    margin: 0px 200px;
-    padding-top: 45px;
     color: #fff;
+
 }

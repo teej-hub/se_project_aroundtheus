@@ -2,43 +2,32 @@
     max-width: 880px;
     max-height: 742px;
     margin-top: 51px;
-
+    /*margin: 51px auto 0;*/
 }
 
 .card__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 282px);
     margin: 0;
     padding: 0;
-    grid-template-areas: 
-        "card1 card2 card3"
-        "card4 card5 card6";
     list-style-type: none;
-    grid-column-gap: 17px;
-    grid-row-gap: 20px;
+    grid-gap: 20px 17px;
 }
 
-.card__yosemite {
-    grid-area: card1;
+@media screen and (max-width: 1279px) and (min-width: 880px){
+    .content{
+        margin: 40px 150px;
+    }
 }
 
-.card__lake-louise {
-    grid-area: card2;
+@media screen and (max-width: 879px) and (min-width: 321px){
+    .card__list {
+        
+    }
 }
 
-.card__bald-mountains {
-    grid-area: card3;
-}
-
-.card__latemar {
-    grid-area: card4;
-}
-
-.card__vanoise {
-    grid-area: card5;
-}
-
-.card__lago {
-    grid-area: card6;
+@media screen and (max-width: 320px){
+    .cards {
+        margin: 51px 0 0;
+    }
 }
