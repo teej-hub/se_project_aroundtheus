@@ -47,4 +47,7 @@
     border: none;
 }
 
+.card__heart-button:hover {
+    opacity: .5;
+}
 
