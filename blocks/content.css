@@ -1,9 +1,25 @@
 .content {
-    margin: 40px 200px 0;
+    margin: 40px 0 0;
+    padding: 0 15.625vw;
+}
+/* Padding for when the resolution should hold 3 cards*/
+@media screen and (min-width: 918px) and (max-width: 1279px){
+    .content {
+        /*padding: 0 2.07vw;
+        */
+        padding: 0 min(19px, 200px);
+    }
 }
 
-@media screen and (max-width: 320px){
+/* Width ranges for 2 cards */
+@media screen and (min-width: 619px) and (max-width: 917px){
     .content {
-        margin: 42px 19px 0;
+        padding: 0 min(19px, 168px);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 618px){
+    .content {
+        padding: 0 min(19px, 168px);
     }
 }

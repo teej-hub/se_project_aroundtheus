@@ -1,9 +1,9 @@
 .profile {
     display: flex;
     align-items: center;
-    /*
-    margin-top: 40px;
-    margin: 40px 200px 0;*/
+    justify-content: space-between;
+    max-width: 880px;
+    margin: 0 auto;
 }
 
 .profile__image {
@@ -14,7 +14,7 @@
 }
 
 .profile__content {
-    margin-left: 30px;
+    margin: 0 auto 0 30px;
 }
 
 .profile__name {
@@ -54,9 +54,9 @@
     background-position: center;
     box-sizing: border-box;
     border: solid 2px #fff;
-    margin-left: auto;
 }
 
+/*
 @media screen and (max-width: 800px){
 
 }
@@ -95,3 +95,4 @@
         background-size: 16px 16px;
     }
 }
+*/
