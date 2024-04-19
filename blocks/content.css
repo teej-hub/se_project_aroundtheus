@@ -2,6 +2,7 @@
     margin: 40px 0 0;
     padding: 0 15.625vw;
 }
+
 /* Padding for when the resolution should hold 3 cards*/
 @media screen and (min-width: 918px) and (max-width: 1279px){
     .content {

@@ -79,13 +79,12 @@
         .profile__content {
             margin: 0 auto 0 10px;
         }
-        
+         
         .profile__name {
             font-size: 30px;
         }
     }
 }
-
 
 @media screen and (max-width: 529px){
     .profile {
@@ -112,6 +111,7 @@
     .profile__subtitle {
         text-align: center;
         margin-top: 14px;
+        font-size: 14px;
     }
 
     .profile__add-button {
