@@ -24,6 +24,9 @@
     margin: 0;
     display: flex;
     align-items: flex-end;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .profile__subtitle {
@@ -31,7 +34,9 @@
     font-size: 18px;
     line-height: 1.21;
     margin: 7px 0 0;
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .profile__edit-button {
@@ -41,7 +46,7 @@
     background-position: center;
     box-sizing: border-box;
     border: solid 1px #fff;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
     margin-left: 18px;
     margin-bottom: 9px;
 }
@@ -58,6 +63,7 @@
     background-position: center;
     box-sizing: border-box;
     border: solid 2px #fff;
+    border-radius: 2px;
 }
 
 .profile__add-button:hover {
