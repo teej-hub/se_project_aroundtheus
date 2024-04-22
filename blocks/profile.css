@@ -21,6 +21,7 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 1.14;
+    max-width: 373px;
     margin: 0;
     display: flex;
     align-items: flex-end;
@@ -34,6 +35,7 @@
     font-size: 18px;
     line-height: 1.21;
     margin: 7px 0 0;
+    max-width: 373px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -53,6 +55,7 @@
 
 .profile__edit-button:hover {
     opacity: .6;
+    cursor: pointer;
 
 }
 .profile__add-button {
@@ -68,6 +71,7 @@
 
 .profile__add-button:hover {
     opacity: .6;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 530px) and (max-width: 770px){
