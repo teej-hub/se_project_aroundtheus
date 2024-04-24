@@ -17,14 +17,18 @@
     margin: 0 auto 0 30px;
 }
 
+.profile__content-top{
+    display: flex;
+    align-items: center;
+}
+
 .profile__name {
     font-weight: 500;
     font-size: 42px;
     line-height: 1.14;
-    max-width: 373px;
+    max-width: 415px;
     margin: 0;
-    display: flex;
-    align-items: flex-end;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -34,8 +38,8 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.21;
-    margin: 7px 0 0;
-    max-width: 373px;
+    margin: 7px auto 0;
+    max-width: 415px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -50,7 +54,7 @@
     border: solid 1px #fff;
     background-color: rgba(0, 0, 0, 0);
     margin-left: 18px;
-    margin-bottom: 9px;
+    margin-top: 7px;
 }
 
 .profile__edit-button:hover {
@@ -79,6 +83,10 @@
         width: 50px;
     }
 
+    .profile__name {
+        max-width: 400px;
+    }
+
     @media screen and (min-width: 530px) and (max-width: 660px){
         .profile__content {
             margin: 0 auto 0 10px;
@@ -86,6 +94,27 @@
          
         .profile__name {
             font-size: 30px;
+            max-width: 350px;
+        }
+        .profile__subtitle {
+            max-width: 350px;
+        }
+    }
+
+    @media screen and (min-width: 530px) and (max-width: 610px){
+        .profile__name {
+            max-width: 300px;
+        }
+        .profile__subtitle {
+            max-width: 300px;
+        }
+    }
+    @media screen and (min-width: 530px) and (max-width: 560px){
+        .profile__name {
+            max-width: 250px;
+        }
+        .profile__subtitle {
+            max-width: 250px;
         }
     }
 }
@@ -103,7 +132,6 @@
     .profile__name {
         font-size: 22px;
         line-height: 1.21;
-        align-items: center;
     }
 
     .profile__edit-button {
@@ -123,5 +151,23 @@
         height: 50px;
         margin-top: 36px;
         background-size: 16px 16px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        .profile__name {
+            max-width: 350px;
+        }
+        .profile__subtitle {
+            max-width: 350px;
+        }
+
+        @media screen and (max-width: 420px){
+            .profile__name {
+                max-width: 196px;
+            }
+            .profile__subtitle {
+                max-width: 196px;
+            }
+        }
     }
 }
