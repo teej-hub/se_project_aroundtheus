@@ -5,36 +5,54 @@
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    z-index: 999;
+    display: none;
+    padding: 0 19px;
 }
 
 .modal__container {
-    /*display: none;*/
     position: relative;
     background-color: #fff;
     margin: auto;
-    padding: 36px;
     border-radius: 10px;
-
-}
-
-.modal__container__close-button {
-
+    padding: 34px 36px 36.51px;
+    max-height: 330px;
+    max-width: 430px;
 }
 
 .modal__heading {
     color: #000;
+    font-size: 24px;
+    line-height: 29.05px;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 54px;
 }
 
 .modal__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 358px;
+    
+}
 
+.modal__form__input {
+    font-size: 14px;
+    line-height: 16.94px;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    margin-bottom: 29.74px;
+    height: 27.26px;
+}
+
+input:nth-of-type(2) {
+    margin-bottom: 48px;
 }
 
 .modal__close {
     position: absolute;
-    top: calc(100% + 5px);
-    right: calc(100% + 5px);
+    bottom: calc(100% + 5px);
+    left: calc(100% + 5px);
     cursor: pointer;
     background-image: url('../images/close.svg');
     border: none;
@@ -46,11 +64,45 @@
     /*outline: none;*/
 }
 
-.modal__button {
-    
+.modal__close:hover {
+    opacity: .6;
 }
 
+.modal__button {
+    max-height: 50.15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    border-radius: 2px;
+    padding: 13.66px 124px 18.49px;
+}
+
+.modal__button:hover {
+    opacity: .8;
+}
 
 .modal_opened {
     display: flex;
+}
+
+@media screen and (max-width: 630px){
+    .modal__container {
+        max-width: 238px;
+        max-height: 272px;
+        padding: 25px 22px;
+    }
+    .modal__close {
+        height: 26px;
+        width: 26px;
+        bottom: calc(100% + 13px);
+        left: calc(100% - 26px);
+    }
+
+    .modal__button {
+        padding: 14px 100px;
+    }
 }
