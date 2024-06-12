@@ -86,7 +86,7 @@ input:nth-of-type(2) {
 }
 
 .modal_opened {
-    display: flex;
+    display: none;
 }
 
 @media screen and (max-width: 630px){

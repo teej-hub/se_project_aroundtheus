@@ -24,3 +24,16 @@ let initialCards = [
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
     }
 ];
+
+
+const editButton = document.querySelector("#profile-edit-button");
+let openState = document.querySelector(".modal");
+openState.setAttribute("display", "flex");
+console.log(openState.attributes);
+/*
+editButton.addEventListener("click", openModal());
+
+function openModal(){
+    let openState = document.querySelector(".modal_opened").setAttribute("display", "flex");
+    console.log("Edit profile should be open now");
+}*/
