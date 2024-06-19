@@ -27,13 +27,16 @@ let initialCards = [
 
 
 const editButton = document.querySelector("#profile-edit-button");
-let openState = document.querySelector(".modal");
-openState.setAttribute("display", "flex");
-console.log(openState.attributes);
-/*
-editButton.addEventListener("click", openModal());
+const modalState = document.querySelector("#profile-edit-modal");
+const closeButton = document.querySelector("#profile-close-button");
+editButton.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
+
 
 function openModal(){
-    let openState = document.querySelector(".modal_opened").setAttribute("display", "flex");
+    modalState.classList.add("modal_opened");
     console.log("Edit profile should be open now");
-}*/
+}
+function closeModal(){
+    modalState.classList.remove("modal_opened");
+}
