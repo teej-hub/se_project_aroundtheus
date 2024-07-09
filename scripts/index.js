@@ -1,4 +1,4 @@
-let initialCards = [
+const initialCards = [
     {
         name: "Yosemite Valley",
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
@@ -28,13 +28,13 @@ let initialCards = [
 /*                            Elements                                */
 /*--------------------------------------------------------------------*/
 const editButton = document.querySelector("#profile-edit-button");
-const modalState = document.querySelector("#profile-edit-modal");
+const profileModal = document.querySelector("#profile-edit-modal");
 const closeButton = document.querySelector("#profile-close-button");
 const profileName = document.querySelector(".profile__name");
 const profileDesc = document.querySelector(".profile__subtitle");
 const inputProfileName = document.querySelector("#modal-input-name");
 const inputProfileDesc = document.querySelector("#modal-input-text");
-const profileEditForm = modalState.querySelector(".modal__form");
+const profileEditForm = profileModal.querySelector("#modal-input");
 const cardListEl = document.querySelector('.cards__list');
 const cardTemplate = document.querySelector("#card-template").content.firstElementChild;
 
@@ -42,7 +42,7 @@ const cardTemplate = document.querySelector("#card-template").content.firstEleme
 /*                            Functions                               */
 /*--------------------------------------------------------------------*/
 function closeModal() {
-    modalState.classList.remove("modal_opened");
+    profileModal.classList.remove("modal_opened");
 }
 
 function getCardElement(cardData){
@@ -72,7 +72,7 @@ function handleFormSubmit (e){
 editButton.addEventListener("click", () => {
     inputProfileName.value = profileName.textContent;
     inputProfileDesc.value = profileDesc.textContent;
-    modalState.classList.add("modal_opened");
+    profileModal.classList.add("modal_opened");
 });
 
 closeButton.addEventListener("click", closeModal);
