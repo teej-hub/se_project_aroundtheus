@@ -41,72 +41,6 @@
             <!--cards container, grid type -->
             <section class="cards">
                 <ul class="cards__list">
-                    <li class="card">
-                        <img
-                            src="./images/yosemite.jpg"
-                            alt="Scenery in yosemite"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Yosemite Valley</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img
-                            src="./images/lake-louise.jpg"
-                            alt="Scenery of lake Louise"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Lake Louise</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img
-                            src="./images/bald-mountains.jpg"
-                            alt="Scenery of the bald mountains"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Bald Mountains</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img
-                            src="./images/latemar.jpg"
-                            alt="Scenery of Latemar"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Latemar</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img
-                            src="./images/vanoise.jpg"
-                            alt="Scenery of Vanoise National Park"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Vanoise National Park</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img
-                            src="./images/lago.jpg"
-                            alt="Scenery in Lago di Braies"
-                            class="card__image"
-                        >
-                        <div class="card__content">
-                            <h2 class="card__title">Lago di Braies</h2>
-                            <button class="card__heart-button" type="button" aria-label="Button for liking a user's card"></button>
-                        </div>
-                    </li>
                 </ul>
             </section>
         </main>
@@ -125,6 +59,17 @@
             </form>
         </div>
     </div>
+
+    <template id="card-template">
+        <li class="card">
+            <img class="card__image" src="" alt="" />
+            <div class="card__description">
+                <h2 class="card__title"></h2>
+                <button class="card__like-button" type="button"></button>
+            </div>
+        </li>
+    </template>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>
