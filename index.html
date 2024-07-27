@@ -59,6 +59,17 @@
             </form>
         </div>
     </div>
+    <div class="modal" id="card-create-modal">
+        <div class="modal__container">
+            <button class="modal__close" id="card-create-close-button"></button>
+            <p class="modal__heading">New Place</p>
+            <form class="modal__form" id="modal-input">
+                <input class="modal__form-input" id="modal-input-title" type="text" name="name" placeholder="Title"/>
+                <input class="modal__form-input" id="modal-input-url" type="text" name="url" placeholder="Image URL"/>
+                <button class="modal__button" id="card-save-button">Save</button>    
+            </form>
+        </div>
+    </div>
 
     <template id="card-template">
         <li class="card">
