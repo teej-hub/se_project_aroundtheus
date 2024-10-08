@@ -34,7 +34,7 @@
                     </div>
                     <p class="profile__subtitle">Explorer</p>
                 </div>
-                <button class="profile__add-button" type="button" aria-label="Button for adding to one's profile"></button>
+                <button class="profile__add-button" id="card-add" type="button" aria-label="Button for adding to one's profile"></button>
                 
             </section>
 
@@ -48,24 +48,48 @@
             <p class="footer__content">© 2022 Around The U.S.</p>
         </footer>
     </div>
-    <div class="modal" id="profile-edit-modal">
+    <div class="modal" id="edit-popup">
         <div class="modal__container">
             <button class="modal__close" id="profile-close-button"></button>
             <p class="modal__heading">Edit Profile</p>
-            <form class="modal__form" id="modal-input">
-                <input class="modal__form-input" id="modal-input-name" type="text" name="name" placeholder="Jacques Cousteau"/>
-                <input class="modal__form-input" id="modal-input-text" type="text" name="subtitle" placeholder="Explorer"/>
+            <form class="modal__form" id="profile-edit-form">
+                <input
+                    class="modal__form-input" 
+                    id="modal-input-name" 
+                    type="text" 
+                    name="name" 
+                    placeholder="Jacques Cousteau"
+                />
+                <input 
+                    class="modal__form-input" 
+                    id="modal-input-text" 
+                    type="text" 
+                    name="subtitle" 
+                    placeholder="Explorer"
+                />
                 <button class="modal__button" id="profile-save-button">Save</button>
             </form>
         </div>
     </div>
-    <div class="modal" id="card-create-modal">
+    <div class="modal" id="add-popup">
         <div class="modal__container">
             <button class="modal__close" id="card-create-close-button"></button>
             <p class="modal__heading">New Place</p>
-            <form class="modal__form" id="modal-input">
-                <input class="modal__form-input" id="modal-input-title" type="text" name="name" placeholder="Title"/>
-                <input class="modal__form-input" id="modal-input-url" type="text" name="url" placeholder="Image URL"/>
+            <form class="modal__form" id="card-add-form">
+                <input 
+                    class="modal__form-input" 
+                    id="modal-input-title" 
+                    type="text" 
+                    name="name" 
+                    placeholder="Title"
+                />
+                <input 
+                    class="modal__form-input" 
+                    id="modal-input-url" 
+                    type="text" 
+                    name="url" 
+                    placeholder="Image URL"
+                />
                 <button class="modal__button" id="card-save-button">Save</button>    
             </form>
         </div>
@@ -76,7 +100,7 @@
             <img class="card__image" src="" alt="" />
             <div class="card__content">
                 <h2 class="card__title"></h2>
-                <button class="card__heart-button" type="button"></button>
+                <button class="card__like-button" type="button"></button>
             </div>
         </li>
     </template>

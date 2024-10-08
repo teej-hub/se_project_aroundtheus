@@ -34,7 +34,7 @@
     overflow: hidden;
 }
 
-.card__heart-button {
+.card__like-button {
     margin-right: 20px;
     background: transparent url(../images/heart.svg) center no-repeat;
     height: 18px;
