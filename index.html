@@ -67,14 +67,14 @@
                     name="subtitle" 
                     placeholder="Explorer"
                 />
-                <button class="modal__button" id="profile-save-button">Save</button>
+                <button class="modal__button" type="submit">Save</button>
             </form>
         </div>
     </div>
     <div class="modal" id="add-popup">
         <div class="modal__container">
             <button class="modal__close" id="card-create-close-button"></button>
-            <p class="modal__heading">New Place</p>
+           <!--  <p class="modal__heading">New Place</p>
             <form class="modal__form" id="card-add-form">
                 <input 
                     class="modal__form-input" 
@@ -90,11 +90,12 @@
                     name="url" 
                     placeholder="Image URL"
                 />
-            <p class="modal__heading">New place</p>
-            <form class="modal__form" id="modal-input-card">
+                <button class="modal__button" id="card-save-button">Save</button> -->
+            <p class="modal__heading">New Place</p>
+            <form class="modal__form" id="card-add-form">
                 <input class="modal__form-input" id="modal-input-title" type="text" name="name" placeholder="Title"/>
-                <input class="modal__form-input" id="modal-input-url" type="text" name="url" placeholder="Image link"/>
-                <button class="modal__button" id="card-save-button">Save</button>    
+                <input class="modal__form-input" id="modal-input-url" type="text" name="url" placeholder="Image URL"/>
+                <button type="submit" class="modal__button">Save</button>    
             </form>
         </div>
     </div>

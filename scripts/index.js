@@ -32,11 +32,12 @@ const initialCards = [
 // Buttons 
 const editButton = document.querySelector("#profile-edit-button");
 const closeProfile = document.querySelector("#profile-close-button");
-const saveProfile = document.querySelector("#profile-save-button");
+//const saveProfile = document.querySelector("#profile-save-button");
+const saveProfileForm = document.querySelector("#profile-edit-form");
 const cardCreate = document.querySelector("#card-add");
 const closeCard = document.querySelector("#card-create-close-button");
-const saveCard = document.querySelector("#card-add-form");
-
+//const saveCard = document.querySelector("#card-save-button");
+const saveCardForm = document.querySelector("#card-add-form");
 // popup
 const profileModal = document.querySelector("#edit-popup");
 const profileEditForm = profileModal.querySelector("#modal-input");
@@ -90,19 +91,20 @@ function renderCard(cardData){
     cardImageEl.src = cardData.link;
     
     cardImageEl.alt = cardData.name;
-    console.log(cardElement.children);
-    cardListEl.append(cardElement);
+    //console.log(cardElement.children);
+    cardListEl.prepend(cardElement);
     return cardElement;
 }
 
-function addCardElement(titleInput, urlInput){
-    const cardElement = cardTemplate.cloneNode(true);
-    const cardImageEl = cardElement.querySelector('.card__image');
-    const cardTitleEl = cardElement.querySelector('.card__title');
-    cardTitleEl.textContent = titleInput;
-    cardImageEl.src = urlInput;
-    cardImageEl.alt = titleInput;
-    cardListEl.prepend(cardElement);
+function addCardElement(){
+    const newCard = document.querySelector("#card-add-form");
+    const newCardTitle = newCard.querySelector("#modal-input-title");
+    const newCardUrl = newCard.querySelector("#modal-input-url");
+    const newCardElement = cardTemplate.cloneNode(true);
+    
+    console.log("New card's title %s", newCardTitle);
+    console.log("New card's url: %s ", newCardUrl);
+    
 }
 
 /*--------------------------------------------------------------------*/
@@ -119,12 +121,16 @@ function handleProfileFormSubmit (e){
 
 function handleCardFormSubmit (e){
     e.preventDefault();
-    console.log("handle card submit triggered");
-    addCardElement(inputCardTitle.value, inputCardURL.value);
+    //addCardElement(inputCardTitle.value, inputCardURL.value);
     //cardTitleEl.textContent = inputCardTitle.value;
     //cardImageEl.textContent = inputCardURL.value;
+    const inputCardTitle = document.querySelector("#modal-input-title");
+    const inputCardUrl = document.querySelector("#modal-input-url");
+    const newCard = {name: inputCardTitle.value, link: inputCardUrl.value};
+    renderCard(newCard);
+    //console.log(inputTitle.value);
     console.log("handleCardSubmit called");
-
+    //renderCard();
     closeCardPopup;
 }
 
@@ -151,10 +157,10 @@ cardCreate.addEventListener("click", () => {
 });
 
 closeProfile.addEventListener("click", closeProfilePopup);
-saveProfile.addEventListener("submit", handleProfileFormSubmit);
+saveProfileForm.addEventListener("submit", handleProfileFormSubmit);
 closeCard.addEventListener("click", closeCardPopup);
-saveCard.addEventListener("submit", handleCardFormSubmit);
+saveCardForm.addEventListener("submit", handleCardFormSubmit);
 
-initialCards.forEach((cardData) => {
+initialCards.reverse().forEach((cardData) => {
     renderCard(cardData);
 })
