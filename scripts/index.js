@@ -43,18 +43,6 @@ const profileEditForm = profileModal.querySelector("#modal-input");
 const cardModal = document.querySelector("#add-popup");
 
 // data, input
-const closeProfile = document.querySelector("#profile-close-button");
-const saveProfile = document.querySelector("#profile-save-button"); // Linked saveProfile to the form instead of the button, and the submit listener works now
-const cardCreate = document.querySelector("#card-add");
-const closeCard = document.querySelector("#card-create-close-button");
-const saveCard = document.querySelector("#modal-input-card");
-
-// popup
-const profileModal = document.querySelector("#profile-edit-modal");
-const profileEditForm = profileModal.querySelector("#modal-input");
-const cardModal = document.querySelector("#card-create-modal");
-
-// data, input
 const profileName = document.querySelector(".profile__name");
 const profileDesc = document.querySelector(".profile__subtitle");
 const inputProfileName = document.querySelector("#modal-input-name");
@@ -81,7 +69,7 @@ function closeCardPopup(){
     cardModal.classList.remove("modal_opened");
 }
 
-function getCardElement(cardData){
+/* function getCardElement(cardData){
     const cardElement = cardTemplate.cloneNode(true);
     const cardImage = cardElement.querySelector('.card__image');
     const cardTitle = cardElement.querySelector('.card__title');
@@ -91,16 +79,19 @@ function getCardElement(cardData){
     console.log("getCardElement called");
     return cardElement;
 }
-
+ */
 function renderCard(cardData){
-    console.log("addCardElement called");
+    //console.log("addCardElement called");
     const cardElement = cardTemplate.cloneNode(true);
     const cardImageEl = cardElement.querySelector('.card__image');
     const cardTitleEl = cardElement.querySelector('.card__title');
     cardTitleEl.textContent = cardData.name;
+    
     cardImageEl.src = cardData.link;
+    
     cardImageEl.alt = cardData.name;
-    console.log("getCardElement called");
+    console.log(cardElement.children);
+    cardListEl.append(cardElement);
     return cardElement;
 }
 
@@ -110,8 +101,8 @@ function addCardElement(titleInput, urlInput){
     const cardTitleEl = cardElement.querySelector('.card__title');
     cardTitleEl.textContent = titleInput;
     cardImageEl.src = urlInput;
-    cardImageEl.alt = "Image of " + titleInput;
-    cardListEl.unshift(cardElement);
+    cardImageEl.alt = titleInput;
+    cardListEl.prepend(cardElement);
 }
 
 /*--------------------------------------------------------------------*/
