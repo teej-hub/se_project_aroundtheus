@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 
-.card__like-button-active {
+.card__like-button_active {
     background: url(../images/heart_active.svg);
     opacity: 1;
 }

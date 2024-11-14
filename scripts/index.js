@@ -53,7 +53,7 @@ const inputCardURL = document.querySelector("#modal-input-url");
 // cards
 const cardListEl = document.querySelector('.cards__list');
 const cardTemplate = document.querySelector("#card-template").content.firstElementChild;
-const likeButton = cardTemplate.querySelector("#like-button");
+/* const likeButton = cardTemplate.querySelector("#like-button"); */
 /*--------------------------------------------------------------------*/
 /*                            Functions                               */
 /*--------------------------------------------------------------------*/
@@ -72,7 +72,7 @@ function renderCard(cardData){
     const cardElement = cardTemplate.cloneNode(true);
     const cardImageEl = cardElement.querySelector('.card__image');
     const cardTitleEl = cardElement.querySelector('.card__title');
-   /*  const likeButton = cardElement.querySelector("#like-button"); */
+    const likeButton = cardElement.querySelector("#like-button");
     cardTitleEl.textContent = cardData.name;
     cardImageEl.src = cardData.link;
     cardImageEl.alt = cardData.name;
@@ -139,3 +139,9 @@ saveCardForm.addEventListener("submit", handleCardFormSubmit);
 initialCards.reverse().forEach((cardData) => {
     renderCard(cardData);
 })
+const likeButtons = document.querySelectorAll("#like-button");
+likeButtons.forEach(likeButton => {
+    likeButton.addEventListener("click", () => {
+        likeButton.classList.toggle("card__like-button_active");
+    });
+});
